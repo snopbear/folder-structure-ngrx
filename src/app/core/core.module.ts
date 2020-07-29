@@ -1,3 +1,4 @@
+import { InputOutService } from './service/communications/input-out.service';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -5,20 +6,15 @@ import { CommonModule } from '@angular/common';
 import { CoreRoutingModule } from './core-routing.module';
 import { throwIfAlreadyLoaded } from './utils/module-import-guard';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    CoreRoutingModule,
-    SharedModule
-  ],
-  providers:[
+  imports: [CommonModule, CoreRoutingModule, SharedModule],
+  providers: [
+    InputOutService,
     // interseptors
-  ]
+  ],
 })
 export class CoreModule {
-
   /*
   @SkipSelf()
   A parameter decorator to be used on constructor parameters which tells the 

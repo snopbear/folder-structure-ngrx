@@ -1,5 +1,5 @@
-
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { MaterialModule } from './material/material.module';
@@ -8,22 +8,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [
-
-  ],
-  imports: [
-    CommonModule,
-    SharedRoutingModule,
-    RouterModule,
-    MaterialModule
-  ],
+  declarations: [],
+  imports: [CommonModule, SharedRoutingModule, RouterModule, MaterialModule],
   exports: [
     RouterModule,
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [],
 })
-export class SharedModule { }
+export class SharedModule {}

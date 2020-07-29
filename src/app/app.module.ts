@@ -1,14 +1,14 @@
+import { CommunicationsModule } from './communications/communications.module';
 import { CoreModule } from './core/core.module';
 import { BlockModule } from './block/block.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './block/root/app.component';
-import {AuthModule} from './auth/auth.module'
-import { MaterialModule } from './shared/material/material.module';
+
 
 @NgModule({
    declarations: [
@@ -20,12 +20,13 @@ import { MaterialModule } from './shared/material/material.module';
       BrowserAnimationsModule,
       SharedModule,
       BlockModule,
-      CoreModule
+      CoreModule,
+      CommunicationsModule
    ],
    providers: [],
    bootstrap: [
       AppComponent
    ],
-   schemas: [CUSTOM_ELEMENTS_SCHEMA]
+   schemas: []
 })
 export class AppModule { }
