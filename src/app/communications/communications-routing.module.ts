@@ -1,4 +1,5 @@
-import { InputOutComponent } from './input-out/input-out.component';
+import { CommunicationsShellComponent } from './containers/communications-shell/communications-shell.component';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -6,8 +7,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [  {
   path: 'inputout',
   pathMatch: 'full',
-  component: InputOutComponent
-},];
+  component: CommunicationsShellComponent
+}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

@@ -9,24 +9,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './block/root/app.component';
 
-
 @NgModule({
-   declarations: [
-      HomeComponent
-   ],
-   imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      SharedModule,
-      BlockModule,
-      CoreModule,
-      CommunicationsModule
-   ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ],
-   schemas: []
+  declarations: [HomeComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    BlockModule,
+    CoreModule,
+    CommunicationsModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [],
 })
-export class AppModule { }
+export class AppModule {}

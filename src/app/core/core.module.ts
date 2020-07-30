@@ -5,10 +5,19 @@ import { CommonModule } from '@angular/common';
 
 import { CoreRoutingModule } from './core-routing.module';
 import { throwIfAlreadyLoaded } from './utils/module-import-guard';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, CoreRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+    CoreRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+  exports: [FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [
     InputOutService,
     // interseptors

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthModule } from './auth/auth.module';
+import { CommunicationsModule } from './communications/communications.module';
 
 const routes: Routes = [
   {
